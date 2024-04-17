@@ -38,6 +38,8 @@ const main = async () => {
                 + args;
         }
         else if (process.platform == 'win32') {
+            console.log('========================== Inside Win32 ===========================');
+            console.log(productpath);
             script = 'cd ' + '"' + productpath + '\\jdk\\bin"' + '\n' + './java.exe -jar "' + productpath + '\\FunctionalTester\\bin\\hcl_ft.jar"'
                 + ' -datastore ' + projectdir
                 + ' -playback ' + suite
